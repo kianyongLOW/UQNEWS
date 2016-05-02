@@ -62,19 +62,21 @@
 
       <h2>All <strong>Thoughts</strong></h2>
       <hr>
-        <div class="col-lg-4 col-lg-offset-4" data-ng-controller="studentCtrl">
-                 
-        <div data-ng-repeat="s in student">
-                
-                <div id="circle" class="col-lg-2"><strong>{{student[$index].name}}</strong><br>{{student[$index].MSG}}
-                    <br>
-                 <div class="showBtn">
-                    <a class="mini-listing gray button fa fa-thumbs-up fa-lg btn col-xs-6" href="property/1909201136430"></a>
-                    <a class="mini-listing gray button fa fa-thumbs-down fa-lg btn col-xs-6" href="property/1909201136430"></a>
-                </div>  
-                
-            </div>
-            </div>
+        <div class="col-lg-2 col-lg-offset-5" data-ng-controller="studentCtrl">
+
+			<div data-ng-repeat="s in student">
+				<div class="coverC">
+					<div id="circle">
+						<strong>{{student[$index].name}}</strong><br>{{student[$index].MSG}}
+						<br>
+					 <div class="showBtn">
+						<a class="mini-listing gray button fa fa-thumbs-up fa-lg btn col-xs-6" href="property/1909201136430"></a>
+						<a class="mini-listing gray button fa fa-thumbs-down fa-lg btn col-xs-6" href="property/1909201136430"></a>
+					</div>  
+
+					</div>
+				</div>
+			</div>
         </div>
         </div>
        
