@@ -67,7 +67,7 @@
 		 <hr>
 	 		<div class="col-lg-4 col-lg-offset-4" data-ng-controller="studentCtrl">
 			  <label>Search for : </label>
-			  <input type="text" data-ng-model="name" />
+			  <input type="text" data-ng-model="name" >
 			  <br><br>
 			  <button class="btn btn-default btn-lg page-scroll" data-ng-click="getstudentData()">Submit</button>
 			  <br><br>
@@ -110,13 +110,16 @@
 					</div>
 						<span id="password"></span>	
 						<br>
-					<div class="col-md-3">
-						<button type="submit" class="btn btn-default" id="btnLogin">Login</button>
-					</div>    
+					<div class="col-md-6 col-md-offset-3">
+						<div class="col-md-6">
+							<button type="submit" class="btn btn-default" id="btnLogin">Login</button>
+						</div>    
+						<div class="col-md-6">
+							<button type="submit" class="btn btn-default" id="btnRegister" data-toggle="modal" data-target="#registerModal" >Register</button>
+						</div>
+					</div>
 				</form>
-				<div class="col-md-3">
-					<button type="submit" class="btn btn-default" id="btnRegister" data-toggle="modal" data-target="#registerModal" >Register</button>
-				</div>
+				
                 <p id="loginResponse"></p>
 			</div>
 		</div>
@@ -166,7 +169,9 @@
 					 </span>
 				</div>
 					<br>
-					<button type="submit" class="btn btn-default" id="btnRegister1">Register</button>
+					<div class="input-group col-md-2 col-md-offset-5">
+						<button type="submit" class="btn btn-default" id="btnRegister1">Register</button>
+					</div>
 				</form>
 			</div>
             <p id="registerResponse"></p>
