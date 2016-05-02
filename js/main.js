@@ -37,3 +37,30 @@ function main() {
 
 
 main();
+
+$("#frmLogin").submit(function(e){
+                e.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "php/login_action.php",
+                    data: $("#frmLogin").serialize(),
+                    async:false,
+                    success: function(data) {
+                        if(data == "success"){
+                            
+                           
+                            $("#loginResponse").fadeOut(2000);
+                            setTimeout(function() {
+                                document.location.href = "abc.php";
+                            }, 1000);
+                        }else if(data == "incorrect"){
+                            document.getElementById("loginResponse").innerHTML = "Invalid password or email.";
+                            $("#loginResponse").fadeOut(5000);
+                        }else if(data == "unsuccessful"){
+                            document.getElementById("loginResponse").innerHTML = "Invalid password or email.";
+                            $("#loginResponse").fadeOut(5000);
+                        }
+                    }
+                   
+                });
+             });
