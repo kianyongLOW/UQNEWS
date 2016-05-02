@@ -62,11 +62,11 @@
 
       <h2>All <strong>Thoughts</strong></h2>
       <hr>
-        <div class="col-md-6 col-md-offset-3" data-ng-controller="studentCtrl">
+        <div class="col-md-4 col-md-offset-4" data-ng-controller="studentCtrl">
 
 			<div data-ng-repeat="s in student">
 				
-					<div id="circle" class="col-md-2">
+					<div id="circle" class="col-md-4">
 						<strong>{{student[$index].name}}</strong><br>{{student[$index].MSG}}
 						<br>
 					 <div class="showBtn">
