@@ -64,3 +64,18 @@ $("#frmLogin").submit(function(e){
                    
                 });
              });
+
+
+$("#frmReg").submit(function(e){
+     e.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "php/register_action.php",
+                    data: $("#frmReg").serialize(),
+                    async:false,
+                    success: function(data) {
+                        console.log(data);
+                    }
+                   
+                });
+});
