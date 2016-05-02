@@ -47,11 +47,11 @@ $("#frmLogin").submit(function(e){
                     async:false,
                     success: function(data) {
                         if(data == "success"){
-                            
+                            document.getElementById("loginResponse").innerHTML = "Logging in..";
                            
                             $("#loginResponse").fadeOut(2000);
                             setTimeout(function() {
-                                document.location.href = "abc.php";
+                                document.location.href = "index.php";
                             }, 1000);
                         }else if(data == "incorrect"){
                             document.getElementById("loginResponse").innerHTML = "Invalid password or email.";
@@ -73,8 +73,31 @@ $("#frmReg").submit(function(e){
                     url: "php/register_action.php",
                     data: $("#frmReg").serialize(),
                     async:false,
+                    dataType:"JSON",
                     success: function(data) {
-                        console.log(data);
+                        
+                        if (data["success"] == 1) {
+                            if(data["message"] == "registered"){
+                                    document.getElementById("registerResponse").innerHTML = "Successfully registered";
+                                    $("#registerResponse").fadeOut(2000);
+                                    setTimeout(function() {
+                                        document.getElementById("frmReg").reset();
+                                        document.location.href = "index.php";
+                                    }, 1000);
+                            }else if(data["message"]  == "email_used") {
+                                document.getElementById("emailError1").innerHTML = "Email in used";
+                                $("#emailError1").fadeOut(4000);
+                           
+                            } else if (data["message"]  == "password_not_match") {
+                                document.getElementById("password").innerHTML = "Password not match with password repeats";
+                                document.getElementById("passwordRepeat").innerHTML = "Password not match with password repeats";
+                                    $("#password1").fadeOut(4000);
+                                    $("#passwordRepeat1").fadeOut(4000);
+                           
+                            }
+                        } else {
+                           
+                        }
                     }
                    
                 });

@@ -117,6 +117,7 @@
 				<div class="col-md-3">
 					<button type="submit" class="btn btn-default" id="btnRegister" data-toggle="modal" data-target="#registerModal" >Register</button>
 				</div>
+                <p id="loginResponse"></p>
 			</div>
 		</div>
 	</div>
@@ -136,7 +137,7 @@
 					<span class="input-group-addon"><i class="fa fa-user"></i></span>
 					<input type="userName" id="userName" name="userName" placeholder="User Name" class="form-control" required>
 				</div>
-					<span id="emailError1"></span>
+					<span id="userError"></span>
 					<br>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
@@ -164,11 +165,11 @@
 					 <input type="radio" name="gender" value="female" > <i class="fa fa-venus" aria-hidden="true" style="color:pink"> </i></label>  
 					 </span>
 				</div>
-					<span id="gender"></span>
 					<br>
 					<button type="submit" class="btn btn-default" id="btnRegister1">Register</button>
 				</form>
 			</div>
+            <p id="registerResponse"></p>
 		</div>
 	</div>
 </div>
