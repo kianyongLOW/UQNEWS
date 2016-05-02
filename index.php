@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html data-ng-app="news" lang="en">
-<head>
+
    <?php
-	require "php/all_require.php";
+	require "php/document-header.php";
 	?>
-</head>
-<body>
 <!-- navbar -->
 <nav id="menu" class="navbar navbar-default navbar-fixed-top">
   <div class="container"> 
@@ -201,7 +197,5 @@
 		</div>
     <!-- below here are those Javascript-->
 <?php
-	require "footer.php";
+	require "php/document-footer.php";
 	?>
-</body>
-</html>
