@@ -1,6 +1,7 @@
 <?php
 	require "php/document-header.php";
 ?>
+
 <!-- navbar -->
 <nav id="menu" class="navbar navbar-default navbar-fixed-top">
   <div class="container"> 
@@ -28,8 +29,7 @@
 			<div data-ng-controller="studentCtrl">
 			  <!-- Add new thought -->
 				<form name="addThought">
-					<input type="text" placeholder="Name" data-ng-model="name" required/><br><br>
-					<input type="text" placeholder="Message" data-ng-model="MSG" required/><br><br>
+					<input class="form-control" type="text" placeholder="Message" data-ng-model="MSG" required><br><br>
 					<button id="addT" class="btn btn-default" data-ng-click="addstudentData(MSG, name)" data-ng-disabled="addThought.$invalid">Add</button>
 				 </form>
 			</div>
@@ -172,6 +172,7 @@
 		</div>
 	</div>
 </div>
+
 <!-- below here are those Javascript-->
 <?php
 	require "php/document-footer.php";
