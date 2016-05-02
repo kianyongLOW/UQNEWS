@@ -1,2 +1,2 @@
 # UQNEWS
-INFS3202 Assignment 1
+INFS3202 Assignment
