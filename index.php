@@ -115,11 +115,11 @@
     </div>
     </div>  
 </div>
-    <!-- login modal -->
+     <!-- login modal -->
     <div class="modal fade center" id="loginModal" tabindex="-1" role="dialog">
 			<div class="modal-dialog modal-md" role="document">
               
-				<div class="modal-content">
+				<div class="modal-content Lmodal">
                       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"></button>
         <h4 class="modal-title">Login</h4>
@@ -138,9 +138,13 @@
 						</div>
                             <span id="password"></span>	
 						<br>
+                            <div class="col-md-3">
                             <button type="submit" class="btn btn-default" id="btnLogin">Login</button>
-                               <button type="submit" class="btn btn-default" id="btnRegister" data-toggle="modal" data-target="#registerModal" >Register</button>
+                            </div>    
                         </form>
+                        <div class="col-md-3">
+                        <button type="submit" class="btn btn-default" id="btnRegister" data-toggle="modal" data-target="#registerModal" >Register</button>
+                            </div>
 					</div>
 				</div>
                 
@@ -154,13 +158,19 @@
 				<div class="modal-content">
                       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"></button>
-        <h4 class="modal-title">Login</h4>
+        <h4 class="modal-title">Register</h4>
       </div>
 					<div class="modal-body">
                         <form id="frmReg">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-user"></i></span>
-							<input type="email" id="email1" name="email" placeholder="Email" class="form-control" required>
+							<input type="userName" id="userName" name="userName" placeholder="User Name" class="form-control" required>
+                            </div>
+                            <span id="emailError1"></span>
+                            <br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                            <input type="email" id="email1" name="email" placeholder="Email" class="form-control" required>
                             </div>
                             <span id="emailError1"></span>
                             <br>
@@ -177,10 +187,15 @@
                             <span id="passwordRepeat1"></span>
 						<br>
                              <div class="input-group">
-                             <label class="fa fa-transgender">Gender:</label><label class="radio-inline"><input type="radio" name="male">Male</label>
+                             <span class="input-group-addon"><label class="fa fa-transgender"> :</label>
+                                 
                             <label class="radio-inline">
-                            <input type="radio" name="female">Female</label>  
+                                <input type="radio" name="gender" value="male" > <i class="fa fa-mars" aria-hidden="true" style="color:blue"> </i></label>
+                            <label class="radio-inline">
+                                <input type="radio" name="gender" value="female" > <i class="fa fa-venus" aria-hidden="true" style="color:pink"> </i></label>  
+                                 </span>
                             </div>
+                            
                             <span id="gender"></span>
 						<br>
                                <button type="submit" class="btn btn-default" id="btnRegister1">Register</button>
