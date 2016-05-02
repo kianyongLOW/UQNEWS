@@ -4,11 +4,9 @@
    <?php
 	require "php/all_require.php";
 	?>
-
 </head>
 <body>
 <!-- navbar -->
-
 <nav id="menu" class="navbar navbar-default navbar-fixed-top">
   <div class="container"> 
     <div class="navbar-header">
@@ -26,9 +24,9 @@
     </div>
   </div>
 </nav>
-      <!-- /navbar --> 
+<!-- /navbar --> 
     
-    <div class="text-center" id="home">
+<div class="text-center" id="home">
   <div class="intro-text">
     <h1><strong>UQ <span class="color">NEWS</span></strong></h1>
       <p>a creative way to spread your <span class="color"> thoughts</span></p>
@@ -48,7 +46,7 @@
       </div>
    
 </div>
-    </div>
+</div>
 
 <div id="displaySection" class="text-center">
 <div class="container">
@@ -202,12 +200,8 @@
 			
 		</div>
     <!-- below here are those Javascript-->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-       <script src="js/angular.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
-<script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
-<script type="text/javascript" src="js/bootstrap.js"></script> 
-<script type="text/javascript" src="js/main.js"></script>
-    
-    </body>
+<?php
+	require "footer.php";
+	?>
+</body>
 </html>
