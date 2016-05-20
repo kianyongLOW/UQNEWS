@@ -1,4 +1,5 @@
 <?php
+session_start();
 require "db_connection.php";
 
 $email = mysqli_real_escape_string($conn, $_POST["email"]);

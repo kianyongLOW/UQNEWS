@@ -46,6 +46,7 @@ $("#frmLogin").submit(function(e){
                     data: $("#frmLogin").serialize(),
                     async:false,
                     success: function(data) {
+                        console.log(data);
                         if(data == "success"){
                             document.getElementById("loginResponse").innerHTML = "Logging in..";
                            
