@@ -88,8 +88,8 @@ session_start();
 		<div class="row">
 		  <!-- chart will be shown here based on the thoughts-->
 		  <h2><strong>Chart</strong></h2>
-		  <hr>
-		  <p></p>
+			<div class="ct-chart">
+			</div>
 		</div>
 	</div>  
 </div>
@@ -189,3 +189,9 @@ session_start();
 <?php
 	require "php/document-footer.php";
 ?>
+
+
+
+
+
+
