@@ -1,16 +1,14 @@
-var jsonData = '{"series":[6,4]}';
+$.ajax({
+	type: "POST",
+	dataType: 'json',
+	url :"php/display-chart.php",
+	success: function (obj){
+		var sum = function(a, b) { return a + b };
 
-var data = JSON.parse(jsonData);
-
-/*
-var data = {
-  series: [5, 3, 4]
-};*/
-
-var sum = function(a, b) { return a + b };
-
-new Chartist.Pie('.ct-chart', data, {
-  labelInterpolationFnc: function(value) {
-    return Math.round(value / data.series.reduce(sum) * 100) + '%';
-  }
+	new Chartist.Pie('.ct-chart', obj, {
+	  labelInterpolationFnc: function(value) {
+		return Math.round(value / obj.series.reduce(sum) * 100) + '%';
+	  }
+	});
+	}
 });
