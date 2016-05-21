@@ -1,5 +1,4 @@
 <?php
-session_start();
 	require "php/document-header.php";
 ?>
 
@@ -15,12 +14,7 @@ session_start();
         <li><a href="#displaySection" class="page-scroll">All Thoughts</a></li>
         <li><a href="#searchSection" class="page-scroll">Search</a></li>
         <li><a href="#chartSection" class="page-scroll">Chart</a></li>
-        <?php if(isset($_SESSION["username"])){ echo $_SESSION["uid"]; ?>
-            <li><a href="logout.php">Logout</a></li>
-        <?php }else{ ?>
         <li><a href="#D-section" data-toggle="modal" data-target="#loginModal">Login</a></li>
-          <?php } ?>
-        
       </ul>
     </div>
   </div>
@@ -50,9 +44,9 @@ session_start();
 		  <h2>All <strong>Thoughts</strong></h2>
 		  <hr>
 			<div class="col-md-4 col-md-offset-4" data-ng-controller="studentCtrl">
-				<div data-ng-repeat="s in student">
+    <div ng-repeat="s in students">
 					<div id="circle" class="col-md-4">
-						<strong>{{student[$index].name}}</strong><br>{{student[$index].MSG}}
+						<strong> {{s.name}}</strong><br>{{s.MSG}}
 						<br>
 						 <div class="showBtn">
 							<a class="mini-listing gray button fa fa-thumbs-up fa-lg btn col-xs-6" href="property/1909201136430"></a>
@@ -64,10 +58,10 @@ session_start();
 		</div>
 	</div>  
 </div>
-   
+
 <div id="searchSection" class="text-center">
 	<div class="container">
-		<div>
+		<div> 
 		<!-- search a thoughts-->
 		 <h2>Search <strong>Thoughts</strong></h2>
 		 <hr>
