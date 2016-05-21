@@ -32,13 +32,11 @@ session_start();
 		<h1><strong>UQ <span class="color">NEWS</span></strong></h1>
 		<p>a creative way to spread your <span class="color"> thoughts</span></p>
 		<div class="col-lg-4 col-lg-offset-4"> 
-			<div data-ng-controller="studentCtrl">
-			  <!-- Add new thought -->
-				<form name="addThought">
-					<input class="form-control" type="text" placeholder="Message" data-ng-model="MSG" required><br><br>
-					<button id="addT" class="btn btn-default" data-ng-click="addstudentData(MSG, name)" data-ng-disabled="addThought.$invalid">Add</button>
-				 </form>
-			</div>
+			<div id="login" ng-controller='sign_up'>
+               <input type="text" size="40" ng-model="msg" placeholder="Type your thought"><br>
+                <button ng-click="check_credentials()">add</button><br>
+                <span id="message">{{message}}</span>
+            </div>
 		</div> 
 	</div>
 </div>
