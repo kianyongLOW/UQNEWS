@@ -1,7 +1,9 @@
 <?php
 session_start();
 include "db_connection.php";
-$message = mysqli_real_escape_string($conn, $_POST['MSG']);
+$data = json_decode(file_get_contents("php://input"));
+$message = $data->MSG;
+//$message = mysqli_real_escape_string($conn, $_POST['MSG']);
 $uid = $_SESSION["userId"];
 $sql = "INSERT INTO `news`(`userId`,`newsContent`, `newsLike` , `newsNotLike`)VALUES($uid, '$message', 0,0)";
 $response = array();

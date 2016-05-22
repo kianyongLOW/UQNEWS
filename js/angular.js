@@ -24,7 +24,7 @@ app.controller('studentCtrl', function($scope, JsonService) {
    
 
 });
- app.controller('sign_up', function ($scope, $http) {
+app.controller('sign_up', function ($scope, $http) {
 
     $scope.check_credentials = function () {
         /*
@@ -37,56 +37,15 @@ app.controller('studentCtrl', function($scope, JsonService) {
         * Password Cannot be blank, not be more than 12 characters, should not contain 1=1.
         * Set the Messages to Blank each time the function is called.
         */
-        $scope.message = "";
         var error = 0;
-        if ($scope.email == "" || $scope.email == null) {
-            error = 1;
-        }
+        var valuesFromText = $scope.msg;
 
         if (error == 0) {
             var request = $http({
-                method: "post",
-                url: window.location.host + "/php/insert-message.php",
+                method: "POST",
+                url: "php/insert-message.php",
                 data: {
-                    email: $scope.email,
-                },
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-            });
-            /* Check whether the HTTP Request is Successfull or not. */
-            request.success(function (data) {
-                $scope.message = "From PHP file : "+data;
-            });
-        }
-        else {
-            $scope.message = "You have Filled Wrong Details! Error: " + error;
-        }
-    }
-
-}); app.controller('sign_up', function ($scope, $http) {
-
-    $scope.check_credentials = function () {
-        /*
-        * Validate the Email and Password using Regular Expression.
-        * Once Validated call the PHP file using HTTP Post Method.
-        */
-        /*
-        * Validate Email and Password.
-        * Email shound not be blank, should contain @ and . and not more than 30 characters.
-        * Password Cannot be blank, not be more than 12 characters, should not contain 1=1.
-        * Set the Messages to Blank each time the function is called.
-        */
-        $scope.message = "";
-        var error = 0;
-        if ($scope.msg == "" || $scope.msg == null) {
-            error = 1;
-        }
-
-        if (error == 0) {
-            var request = $http({
-                method: "post",
-                url: window.location.host + "/php/insert-message.php",
-                data: {
-                    msg: $scope.msg,
+                    MSG: valuesFromText,
                 },
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
             });
