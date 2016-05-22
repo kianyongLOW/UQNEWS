@@ -1,8 +1,9 @@
 <?php
+session_start();
 include "db_connection.php";
 $message = mysqli_real_escape_string($conn, $_POST['MSG']);
-
-$sql = "INSERT INTO `news`(`newsId`, `userId`,`newsContent`, `newsLike` , `newsNotLike`)VALUES('', $_SESSION['uid'], '$message', 0,0)";
+$uid = $_SESSION["userId"];
+$sql = "INSERT INTO `news`(`userId`,`newsContent`, `newsLike` , `newsNotLike`)VALUES($uid, '$message', 0,0)";
 $response = array();
 if($result = $conn ->query($sql)){
     $response["success"] = 1;

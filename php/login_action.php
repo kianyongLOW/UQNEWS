@@ -14,7 +14,7 @@ if(isset($email) && isset($password)) {
         
         if ( (strcmp($row["password"], $password) == 0 ) ) {
 			$_SESSION["username"] = $row["username"];
-			$_SESSION["uid"] = $row["uid"];
+			$_SESSION["userId"] = $row["userId"];
             
             echo "success";
         
