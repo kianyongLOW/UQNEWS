@@ -1,13 +1,21 @@
 <?php
 include "db_connection.php";
 
-$sql = "Select * from `user`";
+$sql = "SELECT gender, COUNT(userId) AS count FROM user GROUP BY gender;";
 $response = array();
 $result = $conn -> query($sql);
 $response["series"] = array();
+$male = 0;
+$female = 0;
 if($rowcnt = $result -> num_rows >0){
-	$rowcnt = $result->num_rows;
-	array_push($response["series"], $rowcnt, $rowcnt);
+	while($row = $result -> fetch_assoc()){
+        if($row["gender"] == "m"){
+            $male = $row["count"];
+        }else{
+            $female = $row["count"];
+        }
+    }
+    array_push($response["series"], $male, $female);
 }
 
 echo json_encode($response);

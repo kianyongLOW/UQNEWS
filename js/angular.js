@@ -51,7 +51,8 @@ app.controller('sign_up', function ($scope, $http) {
             });
             /* Check whether the HTTP Request is Successfull or not. */
             request.success(function (data) {
-                $scope.message = "From PHP file : "+data;
+                $scope.message = "New message added";
+                
             });
         }
         else {

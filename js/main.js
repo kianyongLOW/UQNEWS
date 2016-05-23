@@ -56,9 +56,11 @@ $("#frmLogin").submit(function(e){
                         }else if(data == "incorrect"){
                             document.getElementById("loginResponse").innerHTML = "Invalid password or email.";
                             $("#loginResponse").fadeOut(5000);
+                            $("#frmLogin").trigger("reset");
                         }else if(data == "unsuccessful"){
                             document.getElementById("loginResponse").innerHTML = "Invalid password or email.";
                             $("#loginResponse").fadeOut(5000);
+                            $("#frmLogin").trigger("reset");
                         }
                     }
                    
@@ -87,12 +89,13 @@ $("#frmReg").submit(function(e){
                             }else if(data["message"]  == "email_used") {
                                 document.getElementById("emailError1").innerHTML = "Email in used";
                                 $("#emailError1").fadeOut(4000);
-                           
+                                $("#frmReg").trigger("reset");
                             } else if (data["message"]  == "password_not_match") {
                                 document.getElementById("password").innerHTML = "Password not match with password repeats";
                                 document.getElementById("passwordRepeat").innerHTML = "Password not match with password repeats";
                                     $("#password1").fadeOut(4000);
                                     $("#passwordRepeat1").fadeOut(4000);
+                                    $("#frmReg").trigger("reset");
                            
                             }
                         } else {

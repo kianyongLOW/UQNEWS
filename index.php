@@ -167,9 +167,9 @@ session_start();
 				<div class="input-group">
 					 <span class="input-group-addon"><label class="fa fa-transgender"> :</label>
 					 <label class="radio-inline">
-					 <input type="radio" name="gender" value="male" > <i class="fa fa-mars" aria-hidden="true" style="color:blue"> </i></label>
+					 <input type="radio" name="gender" value="m" required> <i class="fa fa-mars" aria-hidden="true" style="color:blue"> </i></label>
 					 <label class="radio-inline">
-					 <input type="radio" name="gender" value="female" > <i class="fa fa-venus" aria-hidden="true" style="color:pink"> </i></label>  
+					 <input type="radio" name="gender" value="f" > <i class="fa fa-venus" aria-hidden="true" style="color:pink"> </i></label>  
 					 </span>
 				</div>
 					<br>
@@ -187,9 +187,3 @@ session_start();
 <?php
 	require "php/document-footer.php";
 ?>
-
-
-
-
-
-

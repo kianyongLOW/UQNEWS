@@ -5,7 +5,7 @@ $username = mysqli_real_escape_string($conn, $_POST["userName"]);
 $email = mysqli_real_escape_string($conn, $_POST["email"]);
 $password = crypt(mysqli_real_escape_string($conn, $_POST["password"]), '$6$rounds=1000$salted$');
 $passwordRepeat = crypt(mysqli_real_escape_string($conn, $_POST["passwordRepeat"]), '$6$rounds=1000$salted$');
-$location = mysqli_real_escape_string($conn, $_POST["gender"]);
+$gender = mysqli_real_escape_string($conn, $_POST["gender"]);
 
 $getEmailExistSql = "SELECT * FROM `user` WHERE `username`='$username'";
 $result = $conn-> query($getEmailExistSql);
