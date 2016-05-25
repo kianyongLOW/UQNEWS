@@ -11,8 +11,8 @@ if($rowcnt = $result -> num_rows >0){
         $new = array();
         $new["name"] = $row["username"];
         $new["MSG"] = $row["newsContent"];
-        //$new["newsLike"] = $row["newsLike"];
-        //$new["newsNotLike"] = $row["newsNotLike"];
+        $new["newsLike"] = $row["newsLike"];
+        $new["newsNotLike"] = $row["newsNotLike"];
         
         array_push($response["student"] , $new);
     }

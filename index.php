@@ -53,8 +53,8 @@ session_start();
 						<strong> {{s.name}}</strong><br>{{s.MSG}}
 						<br>
 						 <div class="showBtn">
-							<a class="mini-listing gray button fa fa-thumbs-up fa-lg btn col-xs-6" href="property/1909201136430"></a>
-							<a class="mini-listing gray button fa fa-thumbs-down fa-lg btn col-xs-6" href="property/1909201136430"></a>
+							<a class="mini-listing gray button fa fa-thumbs-up fa-lg btn col-xs-6" href="property/1909201136430">{{s.newsLike}}</a>
+							<a class="mini-listing gray button fa fa-thumbs-down fa-lg btn col-xs-6" href="property/1909201136430">{{s.newsNotLike}}</a>
 						</div>  
 					</div>
 				</div>
