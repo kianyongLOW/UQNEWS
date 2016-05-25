@@ -32,7 +32,7 @@ session_start();
 		<h1><strong>UQ <span class="color">NEWS</span></strong></h1>
 		<p>a creative way to spread your <span class="color"> thoughts</span></p>
 		<div class="col-lg-4 col-lg-offset-4"> 
-			<div id="login" ng-controller='sign_up'>
+			<div id="login" ng-controller='studentCtrl'>
                <input type="text" size="40" ng-model="msg" placeholder="Type your thought"><br>
                 <button ng-click="check_credentials()">add</button><br>
                 <span id="message">{{message}}</span>
@@ -48,13 +48,14 @@ session_start();
 		  <h2>All <strong>Thoughts</strong></h2>
 		  <hr>
 			<div class="col-md-4 col-md-offset-4" data-ng-controller="studentCtrl">
-    <div ng-repeat="s in students">
+                <div ng-repeat="s in students">
 					<div id="circle" class="col-md-4">
 						<strong> {{s.name}}</strong><br>{{s.MSG}}
 						<br>
 						 <div class="showBtn">
-							<a class="mini-listing gray button fa fa-thumbs-up fa-lg btn col-xs-6" href="property/1909201136430">{{s.newsLike}}</a>
+				            <a class="mini-listing gray button fa fa-thumbs-up fa-lg btn col-xs-6" href="property/1909201136430">{{s.newsLike}}</a>
 							<a class="mini-listing gray button fa fa-thumbs-down fa-lg btn col-xs-6" href="property/1909201136430">{{s.newsNotLike}}</a>
+
 						</div>  
 					</div>
 				</div>
@@ -75,7 +76,11 @@ session_start();
 			  <br><br>
 			  <button class="btn btn-default btn-lg page-scroll" data-ng-click="getstudentData()">Submit</button>
 			  <br><br>
-			  {{studentData}}<br>
+                 <div ng-repeat="s in studentData">
+					<div id="circle" class="col-md-4">
+						<strong> {{s.name}}</strong><br>{{s.MSG}}
+                     </div>
+                </div>
 			</div>
 		</div>
 	</div>  
@@ -91,7 +96,6 @@ session_start();
 		</div>
 	</div>  
 </div>
-
 <!-- login modal -->
 <div class="modal fade center" id="loginModal" tabindex="-1" role="dialog">
 	<div class="modal-dialog modal-md" role="document">

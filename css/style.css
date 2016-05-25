@@ -140,27 +140,32 @@ input{
 .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
 	background-color: blueviolet;
 }
-#circle {
+#circle:hover {
     background: blueviolet;
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     color:white;
     line-height:33px;
     text-align:center;
     transition: all 0.5s;
 	margin: 5px;
+    font-size: 50px;
+    padding-top: 20px;
+    
 }
 
-#circle:hover{
-    width:105px;
+
+#circle{
+    width:205px;
     color:white;
     background: purple;
     line-height:33px;
     text-align:center;
-    height:100px; 
+    height:200px; 
 	margin-left: 0.5em;
 	margin-right: 0.5em;
+    margin-bottom: 5px;
 	
 }
 #circle .showBtn a{
