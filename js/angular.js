@@ -1,31 +1,11 @@
-var app = angular.module('uqnews', ['jsonService']);
+var app = angular.module('uqnews', []);
 
 
-app.controller('studentCtrl', function($scope, JsonService) {
-  JsonService.get(function(data){
-    $scope.students = data.student;
-  });
+app.controller('studentCtrl', function($scope, $http) {
+   $http.get("php/retrieve-all-thoughts.php").then(function(response) {
+        $scope.students = response.data.student;
+    });
     
-  // Receives the student to look up
-  $scope.getstudentData = function(){
-    studentSearch($scope.name);
-  };
- 
-  // Searches through the student array for a match
-  function studentSearch(name){
-    // If a her is found it is returned
-    $scope.studentData = "Not Found";
-    for(var i=0; i < $scope.students.length; i++){
-      if ($scope.students[i].name === name){
-        $scope.studentData = $scope.students[i].name + " said " + $scope.students[i].MSG;
-      }
-    }
-  }
-   
-
-});
-app.controller('sign_up', function ($scope, $http) {
-
     $scope.check_credentials = function () {
         /*
         * Validate the Email and Password using Regular Expression.
@@ -52,6 +32,8 @@ app.controller('sign_up', function ($scope, $http) {
             /* Check whether the HTTP Request is Successfull or not. */
             request.success(function (data) {
                 $scope.message = "New message added";
+                $scope.refresh();
+
                 
             });
         }
@@ -59,5 +41,22 @@ app.controller('sign_up', function ($scope, $http) {
             $scope.message = "You have Filled Wrong Details! Error: " + error;
         }
     }
+
+  // Receives the student to look up
+  $scope.getstudentData = function(){
+    studentSearch($scope.name);
+  };
+ 
+  // Searches through the student array for a match
+  function studentSearch(name){
+    // If a her is found it is returned
+    $scope.studentData = [];
+    for(var i=0; i < $scope.students.length; i++){
+      if ($scope.students[i].name === name){
+        $scope.studentData.push($scope.students[i]);
+    }
+  }
+}
+   
 
 });

@@ -1,5 +1,5 @@
 <!doctype html>
-<html data-ng-app="uqnews" lang="en">
+<html data-ng-app="uqnews" lang="en" ng-cloak>
 <head>
 <meta charset="utf-8">
 <title>UQ NEWS</title>
