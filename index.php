@@ -114,21 +114,22 @@ session_start();
 					</div>
 						<span id="password"></span>	
 						<br>
-					<div class="col-md-6 col-md-offset-3">
-						<div class="col-md-6">
-							<button type="submit" class="btn btn-default" id="btnLogin">Login</button>
-						</div>    
-						<div class="col-md-6">
-							<button type="submit" class="btn btn-default" id="btnRegister" data-toggle="modal" data-target="#registerModal" >Register</button>
-						</div>
+					<div class="moveRight">
+						<button type="submit" class="btn btn-default" id="btnLogin">Login</button>
+						<p id="loginResponse"></p>
 					</div>
 				</form>
-				
-                <p id="loginResponse"></p>
 			</div>
+			<div class="modal-footer">
+				<div class="col-md-12">
+				<p>No account? Register here</p>
+        		<button type="submit" class="btn btn-default" id="btnRegister" data-toggle="modal" data-target="#registerModal" >Register</button>
+				</div>
+      		</div>
 		</div>
 	</div>
 </div>
+
 
 <!-- register modal-->
 <div class="modal fade center" id="registerModal" tabindex="-1" role="dialog">

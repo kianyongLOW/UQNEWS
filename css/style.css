@@ -12,9 +12,6 @@ a:hover, a:focus {
 	text-decoration: none;
 	color: #f1c40f;
 }
-.Lmodal{
-    height: 230px;
-}
 .img-centered {
 	margin: 0 auto;
 }
@@ -202,5 +199,32 @@ input{
     min-height:500px;
     color:blueviolet;
 }
+
+/* login button position*/
+.moveRight{
+	 padding-right: 13px;
+  	 text-align: right;
+}
+.moveRight .btn + .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+.moveRight .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+.moveRight .btn-block + .btn-block {
+  margin-left: 0;
+}
+
+.modal-footer{
+	text-align: center;
+}
+
+
+
+
+
+
+
 
 
