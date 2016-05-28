@@ -2,10 +2,13 @@ var app = angular.module('uqnews', []);
 
 
 app.controller('studentCtrl', function($scope, $http) {
-   $http.get("php/retrieve-all-thoughts.php").then(function(response) {
+   $scope.updateData = function(){
+    $http.get("php/retrieve-all-thoughts.php").then(function(response) {
         $scope.students = response.data.student;
-    });
-    
+    })
+
+   }
+ $scope.updateData();
     $scope.check_credentials = function () {
         /*
         * Validate the Email and Password using Regular Expression.
@@ -31,10 +34,8 @@ app.controller('studentCtrl', function($scope, $http) {
             });
             /* Check whether the HTTP Request is Successfull or not. */
             request.success(function (data) {
+                $scope.updateData();
                 $scope.message = "New message added";
-                $scope.refresh();
-
-                
             });
         }
         else {

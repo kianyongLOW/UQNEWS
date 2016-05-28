@@ -32,9 +32,10 @@ session_start();
 		<h1><strong>UQ <span class="color">NEWS</span></strong></h1>
 		<p>a creative way to spread your <span class="color"> thoughts</span></p>
 		<div class="col-lg-4 col-lg-offset-4"> 
-			<div id="login" ng-controller='studentCtrl'>
+			<div id="login">
                <input type="text" size="40" ng-model="msg" placeholder="Type your thought"><br>
                 <button ng-click="check_credentials()">add</button><br>
+
                 <span id="message">{{message}}</span>
             </div>
 		</div> 
@@ -47,7 +48,8 @@ session_start();
 		<!-- display all thoughts-->
 		  <h2>All <strong>Thoughts</strong></h2>
 		  <hr>
-			<div class="col-md-4 col-md-offset-4" data-ng-controller="studentCtrl">
+			<div class="col-md-4 col-md-offset-4">
+
                 <div ng-repeat="s in students">
 					<div id="circle" class="col-md-4">
 						<strong> {{s.name}}</strong><br>{{s.MSG}}
@@ -70,7 +72,7 @@ session_start();
 		<!-- search a thoughts-->
 		 <h2>Search <strong>Thoughts</strong></h2>
 		 <hr>
-	 		<div class="col-lg-4 col-lg-offset-4" data-ng-controller="studentCtrl">
+	 		<div class="col-lg-4 col-lg-offset-4">
 			  <label>Search for : </label>
 			  <input type="text" data-ng-model="name" >
 			  <br><br>

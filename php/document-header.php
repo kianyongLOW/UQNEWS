@@ -8,4 +8,4 @@
 <link rel="stylesheet" type="text/css"  href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/chartist.min.css">
 </head>
-<body>
+<body ng-controller='studentCtrl'>
