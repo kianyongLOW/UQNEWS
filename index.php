@@ -48,18 +48,14 @@ session_start();
 		<!-- display all thoughts-->
 		  <h2>All <strong>Thoughts</strong></h2>
 		  <hr>
-			<div class="col-md-4 col-md-offset-4">
-
+			<div class="col-md-12">
                 <div ng-repeat="s in students">
-					<div id="circle" class="col-md-4">
-						<strong> {{s.name}}</strong><br>{{s.MSG}}
-						<br>
-						 <div class="showBtn">
-				            <a class="mini-listing gray button fa fa-thumbs-up fa-lg btn col-xs-6" href="property/1909201136430">{{s.newsLike}}</a>
-							<a class="mini-listing gray button fa fa-thumbs-down fa-lg btn col-xs-6" href="property/1909201136430">{{s.newsNotLike}}</a>
-
-						</div>  
-					</div>
+                    <div class="circle-text col-md-1">
+                        <div>{{s.name}}<br>{{s.MSG}}<br>
+                            <a class="mini-listing gray button fa fa-thumbs-up fa-lg btn col-xs-6 likePosition" href="property/1909201136430">{{s.newsLike}}</a>
+                            <a class="mini-listing gray button fa fa-thumbs-down fa-lg btn col-xs-6 likePosition" href="property/1909201136430">{{s.newsNotLike}}</a>
+                        </div> 
+                   </div>
 				</div>
 			</div>
 		</div>
@@ -72,23 +68,28 @@ session_start();
 		<!-- search a thoughts-->
 		 <h2>Search <strong>Thoughts</strong></h2>
 		 <hr>
-	 		<div class="col-lg-4 col-lg-offset-4">
+	 		<div class="col-lg-12">
 			  <label>Search for : </label>
 			  <input type="text" data-ng-model="name" >
 			  <br><br>
 			  <button class="btn btn-default btn-lg page-scroll" data-ng-click="getstudentData()">Submit</button>
 			  <br><br>
-                 <div ng-repeat="s in studentData">
-					<div id="circle" class="col-md-4">
-						<strong> {{s.name}}</strong><br>{{s.MSG}}
-                     </div>
-                </div>
+                 
+                <div class="col-md-12">
+                <div ng-repeat="s in studentData">
+                    <div class="circle-texts col-md-1">
+                        <div>{{s.name}}<br>{{s.MSG}}<br>
+                           
+                        </div> 
+                   </div>
+				</div>
+			</div>
 			</div>
 		</div>
 	</div>  
 </div>
 
-<div id="chartSection" class="text-center">
+<div id="chartSection" class="text-center col-xs-18">
 	<div class="container">
 		<div class="row">
 		  <!-- chart will be shown here based on the thoughts-->

@@ -58,6 +58,7 @@ app.controller('studentCtrl', function($scope, $http) {
     }
   }
 }
+    
    
 
 });

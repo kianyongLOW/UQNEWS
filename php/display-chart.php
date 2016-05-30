@@ -5,6 +5,7 @@ $sql = "SELECT gender, COUNT(userId) AS count FROM user GROUP BY gender;";
 $response = array();
 $result = $conn -> query($sql);
 $response["series"] = array();
+$response["labels"]  = array();
 $male = 0;
 $female = 0;
 if($rowcnt = $result -> num_rows >0){
@@ -15,6 +16,8 @@ if($rowcnt = $result -> num_rows >0){
             $female = $row["count"];
         }
     }
+    
+    array_push($response["labels"], 'Male', 'Female');
     array_push($response["series"], $male, $female);
 }
 

@@ -225,11 +225,73 @@ input{
 	text-align: center;
 }
 
+.circle-text{
+    width:190px;
+    margin-top: 10px;
+}
+
+.circle-text:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    background: blueviolet;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.circle-text div{
+    float:left;
+    width: 100%;
+    padding-top: 25%;
+    line-height: 1em;
+    margin-top: -0.5em;
+    text-align: center;
+    color: white;
+}
+
+.circle-texts{
+    width:190px;
+    margin-top: 10px;
+}
+
+.circle-texts:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    background: white;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.circle-texts div{
+    float:left;
+    width: 100%;
+    padding-top: 25%;
+    line-height: 1em;
+    margin-top: -0.5em;
+    text-align: center;
+    color: black;
+}
 
 
 
 
+.fa-thumbs-up{
+    color: white;
+}
 
+.fa-thumbs-down{
+    color: white;
+}
 
+.likePosition{
+    padding-top: 30%;
+}
 
 
