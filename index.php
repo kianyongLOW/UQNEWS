@@ -52,7 +52,7 @@ session_start();
                 <div ng-repeat="s in students">
                     <div class="circle-text col-md-1">
                         <div>{{s.name}}<br>{{s.MSG}}<br>
-                            <a class="mini-listing gray button fa fa-thumbs-up fa-lg btn col-xs-6 likePosition" href="property/1909201136430">{{s.newsLike}}</a>
+                            <a class="mini-listing gray button fa fa-thumbs-up fa-lg btn col-xs-6 likePosition" id="like" onclick="likeNews({{s.newsId}})">{{s.newsLike}}</a>
                             <a class="mini-listing gray button fa fa-thumbs-down fa-lg btn col-xs-6 likePosition" href="property/1909201136430">{{s.newsNotLike}}</a>
                         </div> 
                    </div>

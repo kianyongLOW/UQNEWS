@@ -9,6 +9,7 @@ if($rowcnt = $result -> num_rows >0){
     $response["student"] = array();
     while($row = $result -> fetch_assoc()){
         $new = array();
+        $new["newsId"] = $row["newsId"];
         $new["name"] = $row["username"];
         $new["MSG"] = $row["newsContent"];
         $new["newsLike"] = $row["newsLike"];

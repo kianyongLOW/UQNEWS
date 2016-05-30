@@ -46,5 +46,21 @@ if($conn -> query($sqltbl2)){
 }else{
     echo "tbl news failed <br/>";
 }
+
+$sqltbl3 = "CREATE TABLE usernews(
+                newsId int NOT NULL,
+                userId int NOT NULL,
+                newsLike int,
+                newsNotLike int,
+                PRIMARY KEY (newsId, userId),
+                FOREIGN KEY (newsId) REFERENCES news(newsId),
+                FOREIGN KEY (userId) REFERENCES user(userId)
+            )";
+
+if($conn -> query($sqltbl3)){
+    echo "tbl usernews created <br/>";
+}else{
+    echo "tbl usernews failed <br/>";
+}
 $conn->close();
 ?>
