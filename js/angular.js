@@ -10,16 +10,7 @@ app.controller('studentCtrl', function($scope, $http) {
    }
  $scope.updateData();
     $scope.check_credentials = function () {
-        /*
-        * Validate the Email and Password using Regular Expression.
-        * Once Validated call the PHP file using HTTP Post Method.
-        */
-        /*
-        * Validate Email and Password.
-        * Email shound not be blank, should contain @ and . and not more than 30 characters.
-        * Password Cannot be blank, not be more than 12 characters, should not contain 1=1.
-        * Set the Messages to Blank each time the function is called.
-        */
+        
         var error = 0;
         var valuesFromText = $scope.msg;
         if($scope.msg == null){
