@@ -16,7 +16,7 @@ if(isset($email) && isset($password)) {
 			$_SESSION["username"] = $row["username"];
 			$_SESSION["userId"] = base64_encode($row["userId"]);
             $_SESSION['start'] = time();
-            $_SESSION['expire'] = $_SESSION['start'] + (2 * 60);
+            $_SESSION['expire'] = $_SESSION['start'] + (30 * 60);
             echo "success";
         
         }else{

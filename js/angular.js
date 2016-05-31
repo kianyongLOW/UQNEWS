@@ -22,8 +22,10 @@ app.controller('studentCtrl', function($scope, $http) {
         */
         var error = 0;
         var valuesFromText = $scope.msg;
-
-        if (error == 0) {
+        if($scope.msg == null){
+            error = 1;
+        }
+        if (error === 0) {
             var request = $http({
                 method: "POST",
                 url: "php/insert-message.php",
@@ -36,7 +38,7 @@ app.controller('studentCtrl', function($scope, $http) {
             request.success(function (data) {
                 $scope.updateData();
                 if(data.success == 2 || data.success == 0 ){
-                    $scope.message = "You have to log in first";
+                    $scope.message = "Error: Somethign went wrong or you have to log in first";
                 }else{
                     $scope.message = "New message added";
                 }

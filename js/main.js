@@ -6,7 +6,7 @@ function main() {
     $(window).bind('scroll', function() {
         var navHeight = $(window).height() - 100;
         if ($(window).scrollTop() > navHeight) {
-            $('.navbar-default').addClass('bar');
+            //$('.navbar-default').addClass('bar');
         } else {
             $('.navbar-default').removeClass('bar');
         }
@@ -159,4 +159,14 @@ function dislikeNews(newsId){
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
 });
+
+
+function empty(){
+    var x;
+    x = document.getElementById("roll-input").value;
+    if(x== ""){
+        alert("Enter your thought");
+        return false;
+    };
+}
 
