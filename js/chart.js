@@ -6,15 +6,16 @@ $.ajax({
 	success: function (obj){
 		var sum = function(a, b) { return a + b };
 		var options = {
-  			
+  			width: "400px",
+            height:"280px",
             labelInterpolationFnc: function(value) {
                 return Math.round(value / data.series.reduce(sum) * 100) + '%';
             }
         }
         var responsiveOptions = [
           ['screen and (min-width: 150px)', {
-            chartPadding: 0,
-            labelOffset: 40,
+            chartPadding: 20,
+            labelOffset: 20,
             labelDirection: 'explode',
             labelInterpolationFnc: function(value) {
               return value;
