@@ -190,8 +190,9 @@ session_start();
 						<button type="submit" class="btn btn-default" id="btnRegister1">Register</button>
 					</div>
 				</form>
+                <p id="registerResponse"></p>
 			</div>
-            <p id="registerResponse"></p>
+            
 		</div>
 	</div>
 </div>

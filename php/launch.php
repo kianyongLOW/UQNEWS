@@ -3,7 +3,7 @@
 require 'db_connection.php';
 require 'db_delete.php';
 require 'db_connection.php';
-$database = 'uqnews';
+$database = 'infs3202_7202';
 $sql = "CREATE DATABASE " .$database;
 if ($conn ->query($sql)) {
 	echo "Database created successfully. <br>";
