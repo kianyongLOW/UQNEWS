@@ -6,8 +6,7 @@ $.ajax({
 	success: function (obj){
 		var sum = function(a, b) { return a + b };
 		var options = {
-  			width: "640px",
-  			height: "320px",
+  			
             labelInterpolationFnc: function(value) {
                 return Math.round(value / data.series.reduce(sum) * 100) + '%';
             }
@@ -15,7 +14,7 @@ $.ajax({
         var responsiveOptions = [
           ['screen and (min-width: 150px)', {
             chartPadding: 0,
-            labelOffset: 100,
+            labelOffset: 40,
             labelDirection: 'explode',
             labelInterpolationFnc: function(value) {
               return value;
