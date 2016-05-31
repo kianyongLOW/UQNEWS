@@ -58,7 +58,7 @@ session_start();
                             <i style="text-decoration: underline;" >{{s.MSG}}</i>
                             <br>
                             <a class="mini-listing gray button fa fa-thumbs-up fa-lg btn col-xs-6 likePosition" id="like" onclick="likeNews({{s.newsId}});updateData();">{{s.newsLike}}</a>
-                            <a class="mini-listing gray button fa fa-thumbs-down fa-lg btn col-xs-6 likePosition" href="property/1909201136430">{{s.newsNotLike}}</a>
+                            <a class="mini-listing gray button fa fa-thumbs-down fa-lg btn col-xs-6 likePosition" id="dislike" onclick="dislikeNews({{s.newsId}});updateData();">{{s.newsNotLike}}</a>
                         </div> 
                    </div>
 				</div>

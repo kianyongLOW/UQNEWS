@@ -4,7 +4,7 @@ include "db_connection.php";
 $data = json_decode(file_get_contents("php://input"));
 $message = $data->MSG;
 //$message = mysqli_real_escape_string($conn, $_POST['MSG']);
-$uid = $_SESSION["userId"];
+$uid = base64_decode($_SESSION["userId"]);
 $response = array();
 if(isset($uid)){
     $sql = "INSERT INTO `news`(`userId`,`newsContent`, `newsLike` , `newsNotLike`)VALUES($uid, '$message', 0,0)";

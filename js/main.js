@@ -116,11 +116,42 @@ function likeNews(newsId){
                 }
                 xmlhttp.onreadystatechange = function() {
                     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                        document.getElementById("like").innerHTML = xmlhttp.responseText;
+                        if( xmlhttp.responseText == "failed"){
+                            alert("You cannot vote up again or you need to log in");
+                        }else{
+                            document.getElementById("like").innerHTML = xmlhttp.responseText;
+                            alert("You liked it");
+                        }
                     }
                 }
                     
-                    xmlhttp.open("GET", "php/likeNews.php?q=" + btoa(newsId), true);
-                    xmlhttp.send();
+                    xmlhttp.open("POST", "php/likeNews.php", true);
+                    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                    xmlhttp.send("q="+ btoa(newsId));
+                    
+}
+
+function dislikeNews(newsId){
+    if (window.XMLHttpRequest) {
+                    // code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp = new XMLHttpRequest();
+                } else {
+                    // code for IE6, IE5
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        if( xmlhttp.responseText == "failed"){
+                            alert("You cannot vote down again or you need to log in");
+                        }else{
+                            document.getElementById("dislike").innerHTML = xmlhttp.responseText;
+                            alert("You have dislike it");
+                        }
+                    }
+                }
+                    
+                    xmlhttp.open("POST", "php/dislikeNews.php", true);
+                    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                    xmlhttp.send("q="+ btoa(newsId));
                     
 }

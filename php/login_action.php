@@ -14,7 +14,7 @@ if(isset($email) && isset($password)) {
         
         if ( (strcmp($row["password"], $password) == 0 ) ) {
 			$_SESSION["username"] = $row["username"];
-			$_SESSION["userId"] = $row["userId"];
+			$_SESSION["userId"] = base64_encode($row["userId"]);
             
             echo "success";
         
