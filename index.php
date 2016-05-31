@@ -50,8 +50,8 @@ session_start();
 		<p>a creative way to spread your <span class="color"> thoughts</span></p>
 		<div class="col-lg-4 col-lg-offset-4"> 
 			<div id="login">
-               <input type="text" size="40" ng-model="msg" placeholder="Type your thought"><br>
-                <button ng-click="check_credentials()">add</button><br>
+               <input type="text" size="40" ng-model="msg" placeholder="Type your thought"><br><br>
+                <button ng-click="check_credentials()" class="btn btn-default">Insert Thought</button><br>
 
                 <span id="message">{{message}}</span>
             </div>
