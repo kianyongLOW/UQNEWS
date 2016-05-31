@@ -35,7 +35,11 @@ app.controller('studentCtrl', function($scope, $http) {
             /* Check whether the HTTP Request is Successfull or not. */
             request.success(function (data) {
                 $scope.updateData();
-                $scope.message = "New message added";
+                if(data.success == 2 || data.success == 0 ){
+                    $scope.message = "Error: Somethign is wrong with the process or you have to log in first";
+                }else{
+                    $scope.message = "New message added";
+                }
             });
         }
         else {
