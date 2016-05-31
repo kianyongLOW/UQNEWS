@@ -62,8 +62,10 @@ session_start();
                             <br>
                             <i style="text-decoration: underline;" >{{s.MSG}}</i>
                             <br>
-                            <a class="mini-listing gray button fa fa-thumbs-up fa-lg btn col-xs-6 likePosition" id="like" onclick="likeNews({{s.newsId}});updateData();">{{s.newsLike}}</a>
-                            <a class="mini-listing gray button fa fa-thumbs-down fa-lg btn col-xs-6 likePosition" id="dislike" onclick="dislikeNews({{s.newsId}});updateData();">{{s.newsNotLike}}</a>
+                            <a class="mini-listing gray button fa fa-thumbs-up fa-lg btn col-xs-6 likePosition" id="like" onclick="likeNews({{s.newsId}});updateData();" data-toggle="tooltip" title="Like this news">{{s.newsLike}}</a>
+									
+                            <a class="mini-listing gray button fa fa-thumbs-down fa-lg btn col-xs-6 likePosition" id="dislike" onclick="dislikeNews({{s.newsId}});updateData();" data-toggle="tooltip" title="Dislike this news">{{s.newsNotLike}}</a>
+						
                         </div> 
                    </div>
 				</div>
@@ -71,6 +73,8 @@ session_start();
 		</div>
 	</div>  
 </div>
+
+
 
 <div id="searchSection" class="text-center">
 	<div class="container">

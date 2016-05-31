@@ -155,3 +155,8 @@ function dislikeNews(newsId){
                     xmlhttp.send("q="+ btoa(newsId));
                     
 }
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+
