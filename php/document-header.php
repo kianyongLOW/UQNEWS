@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html data-ng-app="uqnews" lang="en" ng-cloak>
 <head>
 <meta charset="utf-8">
@@ -11,3 +11,11 @@
 <link rel="stylesheet" type="text/css" href="css/chartist.min.css">
 </head>
 <body ng-controller='studentCtrl'>
+	
+	
+	
+	
+	
+	
+	
+	 

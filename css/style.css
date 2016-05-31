@@ -19,9 +19,10 @@ ul, ol {
 	list-style: none;
 }
 
+
 /* Navigation */
 #menu {
-	padding: 4px;
+	padding: 5px;
 	transition: all 0.8s;
 }
 #menu.navbar-default {
@@ -52,6 +53,7 @@ ul, ol {
 	padding: 0 !important;
    
 }
+
 @media screen and (max-width: 800px) {
     .bar {
         background-image: none !important;
@@ -72,6 +74,7 @@ ul, ol {
 	background-color: #FFF;
 }
 /* Home Style */
+
 #home {
 	background: url(../img/bg.jpg) no-repeat top fixed;
 	background-size: cover;
@@ -279,9 +282,6 @@ input{
     color: black;
 }
 
-
-
-
 .fa-thumbs-up{
     color: white;
 }
@@ -294,4 +294,6 @@ input{
     padding-top: 30%;
 }
 
-
+.resize{
+	min-width: 400px;
+}

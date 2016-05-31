@@ -4,22 +4,23 @@ session_start();
 ?>
 
 <!-- navbar -->
-<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+<nav id="menu" class="navbar navbar-default navbar-fixed-top" >
   <div class="container"> 
     <div class="navbar-header">
-      <button aria-expanded="true" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
-          <span class="sr-only">Toggle navigation</span> 
-          <span class="icon-bar"></span> 
-          <span class="icon-bar"></span> 
-          <span class="icon-bar"></span>
-        </button>
-       </div>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#home" class="page-scroll">Home</a></li>
         <li><a href="#displaySection" class="page-scroll">All Thoughts</a></li>
         <li><a href="#searchSection" class="page-scroll">Search</a></li>
         <li><a href="#chartSection" class="page-scroll">Chart</a></li>
+
         <?php if(isset($_SESSION["username"])){
                     $now = time(); // Checking the time now when home page starts.
 
@@ -40,8 +41,9 @@ session_start();
     </div>
   </div>
 </nav>
+
 <!-- /navbar --> 
-    
+<section class="resize">
 <div class="text-center" id="home">
 	<div class="intro-text">
 		<h1><strong>UQ <span class="color">NEWS</span></strong></h1>
@@ -56,6 +58,7 @@ session_start();
 		</div> 
 	</div>
 </div>
+
 
 <div id="displaySection" class="text-center">
 	<div class="container">
@@ -121,7 +124,7 @@ session_start();
 			<div class="ct-chart">
 			</div>
 		</div>
-	</div>  
+	</div>
 </div>
 <!-- login modal -->
 <div class="modal fade center" id="loginModal" tabindex="-1" role="dialog">
@@ -215,7 +218,10 @@ session_start();
 		</div>
 	</div>
 </div>
-
+</section>
+<script>
+  document.write('<base href="' + document.location + '" />');
+</script>
 <!-- below here are those Javascript-->
 <?php
 	require "php/document-footer.php";
