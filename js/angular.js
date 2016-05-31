@@ -36,7 +36,7 @@ app.controller('studentCtrl', function($scope, $http) {
             request.success(function (data) {
                 $scope.updateData();
                 if(data.success == 2 || data.success == 0 ){
-                    $scope.message = "Error: Somethign is wrong with the process or you have to log in first";
+                    $scope.message = "You have to log in first";
                 }else{
                     $scope.message = "New message added";
                 }

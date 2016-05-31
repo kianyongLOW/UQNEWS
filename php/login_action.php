@@ -15,7 +15,8 @@ if(isset($email) && isset($password)) {
         if ( (strcmp($row["password"], $password) == 0 ) ) {
 			$_SESSION["username"] = $row["username"];
 			$_SESSION["userId"] = base64_encode($row["userId"]);
-            
+            $_SESSION['start'] = time();
+            $_SESSION['expire'] = $_SESSION['start'] + (2 * 60);
             echo "success";
         
         }else{

@@ -20,9 +20,19 @@ session_start();
         <li><a href="#displaySection" class="page-scroll">All Thoughts</a></li>
         <li><a href="#searchSection" class="page-scroll">Search</a></li>
         <li><a href="#chartSection" class="page-scroll">Chart</a></li>
-        <?php if(isset($_SESSION["username"])){ ?>
-            <li><a href="php/logout.php">Logout</a></li>
-        <?php }else{ ?>
+        <?php if(isset($_SESSION["username"])){
+                    $now = time(); // Checking the time now when home page starts.
+
+                    if ($now > $_SESSION['expire']) {
+                        session_destroy();
+                        
+            ?>
+          <li><a href="#D-section" data-toggle="modal" data-target="#loginModal">Login</a></li>
+                    <?php }else{ ?>
+           
+        <li><a href="php/logout.php">Logout</a></li>
+        <?php }
+            }else{ ?>
         <li><a href="#D-section" data-toggle="modal" data-target="#loginModal">Login</a></li>
           <?php } ?>
         
