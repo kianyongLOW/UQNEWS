@@ -42,7 +42,13 @@ app.controller('studentCtrl', function($scope, $http) {
             $scope.message = "You have Filled Wrong Details! Error: " + error;
         }
     }
-
+ $scope.getClass = function (s) {
+    return  {
+        "fa-mars" : s.gender === 'f',
+        "fa-venus" : s.gender === 'm' 
+    };
+  };
+    
   // Receives the student to look up
   $scope.getstudentData = function(){
     studentSearch($scope.name);

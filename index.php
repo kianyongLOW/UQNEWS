@@ -49,10 +49,15 @@ session_start();
 		  <h2>All <strong>Thoughts</strong></h2>
 		  <hr>
 			<div class="col-md-12">
-                <div ng-repeat="s in students">
+                       <div ng-repeat="s in students">
                     <div class="circle-text col-md-1">
-                        <div>{{s.name}}<br>{{s.MSG}}<br>
-                            <a class="mini-listing gray button fa fa-thumbs-up fa-lg btn col-xs-6 likePosition" id="like" onclick="likeNews({{s.newsId}})">{{s.newsLike}}</a>
+                        <div>
+                            <i data-ng-class="getClass(s)" class="fa" aria-hidden="true" style="color:white;"></i> 
+                            <i>{{s.name}}</i>
+                            <br>
+                            <i style="text-decoration: underline;" >{{s.MSG}}</i>
+                            <br>
+                            <a class="mini-listing gray button fa fa-thumbs-up fa-lg btn col-xs-6 likePosition" id="like" onclick="likeNews({{s.newsId}});updateData();">{{s.newsLike}}</a>
                             <a class="mini-listing gray button fa fa-thumbs-down fa-lg btn col-xs-6 likePosition" href="property/1909201136430">{{s.newsNotLike}}</a>
                         </div> 
                    </div>
